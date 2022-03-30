@@ -56,7 +56,7 @@
 		forall(	do_query(Response), (
 		    json_response(Response),
 			read_term(user_input, Next, [variable_names(NextVariableNames)]),
-			once(( Next == next
+			once(( Next == '$next'
 			; set_query(Next, NextVariableNames), nondet_try_query
 			))
 		)),

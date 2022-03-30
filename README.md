@@ -14,9 +14,9 @@ LOGTALK READY
 {"query":"X=foo","status":"success","unifications":{"X":{"type":"atom","value":"foo"}},"variable_names":["X"]}
 |: list::member(X, [1, 2]).
 {"query":"list::member(X,[1,2])","status":"success","unifications":{"X":{"type":"integer","value":1}},"variable_names":["X"]}
-|: next.
+|: '$next'.
 {"query":"list::member(X,[1,2])","status":"success","unifications":{"X":{"type":"integer","value":2}},"variable_names":["X"]}
-|: next.
+|: '$next'.
 {"query":"list::member(X,[1,2])","status":"fail"}
 |: oops I = \ not valid.
 {"error":"syntax_error(operator_expected)","status":"error"}
@@ -25,4 +25,4 @@ LOGTALK READY
 |: halt.
 ```
 
-The command for `;` "next answer" is `next.`
+The command for `;` "next answer" is `'$next'.`
